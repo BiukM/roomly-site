@@ -1,0 +1,14 @@
+header{
+    background-color: transparent !important;
+    transition: background-color 0.2s ease-in-out;
+
+}
+header.scrolled{
+background-color: #fff !important;
+transition: background-color 0.2s ease-in-out;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+html {
+scroll-behavior: smooth;
+ }
