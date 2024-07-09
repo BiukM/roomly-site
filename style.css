@@ -23,3 +23,8 @@ scroll-behavior: smooth;
         background-image: none;
     }
 }
+
+.home{
+    background-image: url(./images/bg.png);
+    background-size: cover;
+}
