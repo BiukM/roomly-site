@@ -12,3 +12,14 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 html {
 scroll-behavior: smooth;
  }
+ 
+.faq{
+    background-image: url(./images/faq.png);
+    background-size: cover;
+}
+
+@media (max-width: 1024px) {
+    .faq{
+        background-image: none;
+    }
+}
