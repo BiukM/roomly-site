@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roomly — Making Property Renting Easier</title>
+    <link rel="icon" type="image/svg+xml" href="./images/logo.svg">
+    <link rel="stylesheet" href="style.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Meta SEO -->
+    <meta name="title" content="Roomly — Making Property Renting Easier">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+
+    <script>
+     document.addEventListener('DOMContentLoaded', function() {
+    // Immediately start transitioning
+    document.body.style.opacity = 0;
+
+    // Apply transition after a short delay
+    setTimeout(function() {
+        document.body.style.transition = 'opacity 0.3s ease-in-out';
+        document.body.style.opacity = 1;
+    }, 100); // Adjust delay as needed
+});
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('header');
+
+            const handleScroll = () => {
+                if (window.scrollY > 0) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            };
+
+            // Check scroll position on initial load
+            handleScroll();
+
+            // Add scroll event listener
+            document.addEventListener('scroll', handleScroll);
+        });
+
+        // Immediate check to minimize delay
+        document.addEventListener('readystatechange', () => {
+            if (document.readyState !== 'loading') {
+                const header = document.querySelector('header');
+                if (window.scrollY > 0) {
+                    header.classList.add('scrolled');
+                }
+            }
+        });
+    </script>
+</head>
+<body class="bg-gray-100">
+
+<!-- Header -->
+<header class="fixed w-full z-20">
+    <nav class="bg-tranparent border-gray-200 py-7 dark:bg-gray-900">
+        <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+            <a href="./index.html" class="flex items-center">
+                <img src="./images/logo.svg" class="w-14 mr-3 sm:w-16" alt="Roomly Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Roomly</span>
+            </a>
+            <div class="flex items-center lg:order-2">
+                
+                <a href="#" class="text-white bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-blue-600 dark:hover:bg-blue-500 focus:outline-none dark:focus:ring-blue-800  transition duration-300 ease-in-out">Download</a>
+                <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+            <div class="items-center bg-white justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                    <li>
+                        <a href="./index.html" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact us</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Main Content -->
+
+   <!-- Start block -->
+   <section  class="bg-white dark:bg-gray-900 pt-32">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:pt-16 lg:pb-4 lg:px-12">
+        
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Terms and Conditions
+        </h1>
+        <p class="mb-8 text-lg font-light text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Your agreement with Roomly regarding the use of our services</p>
+       
+    
+    </div>
+</section>
+<!-- End block -->
+
+
+<section class="bg-white dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        <div class="max-w-screen-lg">
+
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Welcome to Roomly.com!</h2>
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">These terms and conditions outline the rules and regulations for the use of Roomly's Website, located at Roomly.com.
+            </p>
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">By accessing this website we assume you accept these terms and conditions. Do not continue to use Roomly.com if you do not agree to take all of the terms and conditions stated on this page.
+            </p>
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company's terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client's needs in respect of provision of the Company's stated services, in accordance with and subject to, prevailing law of gb. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.
+            </p>
+
+
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Cookies</h2>
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">We employ the use of cookies. By accessing Roomly.com, you agreed to use cookies in agreement with the Roomly's Privacy Policy.
+            </p><p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">Most interactive websites use cookies to let us retrieve the user's details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.
+            </p>
+
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">License</h2>
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">Unless otherwise stated, Roomly and/or its licensors own the intellectual property rights for all material on Roomly.com. All intellectual property rights are reserved. You may access this from Roomly.com for your own personal use subjected to restrictions set in these terms and conditions.
+            </p>
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">You must not: </p>
+            <ul role="list" class="space-y-5 my-7">
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">Republish material from Roomly.com</span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">Sell, rent or sub-license material from Roomly.com
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white"> Reproduce, duplicate or copy material from Roomly.com
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white"> Redistribute content from Roomly.com</span>
+                </li>
+            </ul>
+
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">This Agreement shall begin on the date hereof.
+            </p>
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. Roomly does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of Roomly,its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, Roomly shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.</p>
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">Roomly reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.</p>
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">You warrant and represent that:</p>
+            <ul role="list" class="space-y-5 my-7">
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">You are entitled to post the Comments on our website and have all necessary licenses and consents to do so.
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">The Comments do not invade any intellectual property right, including without limitation copyright, patent or trademark of any third party.
+
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material which is an invasion of privacy.
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">The Comments will not be used to solicit or promote business or custom or present commercial activities or unlawful activity.
+                    </span>
+                </li>
+            </ul>
+
+
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">You hereby grant Roomly a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or media.</p>
+
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Hyperlinking to our Content
+            </h2>
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">The following organizations may link to our Website without prior written approval:
+            </p>
+
+            <ul role="list" class="space-y-5 my-7">
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">Government agencies.
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">Search engines.
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">News organizations.
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">Online directory distributors may link to our Website in the same manner as they hyperlink to the Websites of other listed businesses.
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">System wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.
+                    </span>
+                </li>
+            </ul>
+
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party's site.
+            </p>
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">We may consider and approve other link requests from the following types of organizations:
+            </p>
+
+            <ul role="list" class="space-y-5 my-7">
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">commonly-known consumer and/or business information sources.
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">dot.com community sites.
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">associations or other groups representing charities.
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">online directory distributors.
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">online directory distributors.
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">accounting, law and consulting firms.
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">educational institutions and trade associations.
+                    </span>
+                </li>
+            </ul>
+
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavorably to ourselves or to our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of Roomly; and (d) the link is in the context of general resource information.
+            </p>
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">These organizations may link to our home page so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits within the context of the linking party's site.
+            </p>
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website, you must inform us by sending an e-mail to Roomly. Please include your name, your organization name, contact information as well as the URL of your site, a list of any URLs from which you intend to link to our Website, and a list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a response.
+            </p>
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">Approved organizations may hyperlink to our Website as follows:
+            </p>
+
+
+            
+            <ul role="list" class="space-y-5 my-7">
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">By use of our corporate name.
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">By use of the uniform resource locator being linked to.
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">By use of any other description of our Website being linked to that makes sense within the context and format of content on the linking party's site.
+                    </span>
+                </li>
+            </ul>
+
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">iFrames</h2>
+
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.
+            </p>
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Content Liability</h2>
+
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.
+            </p>
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Reservation of Rights</h2>
+
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it's linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.
+            </p>
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Removal of links from our website</h2>
+            
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove links but we are not obligated to or so or to respond to you directly.
+            </p>
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">We do not ensure that the information on this website is correct, we do not warrant its completeness or accuracy; nor do we promise to ensure that the website remains available or that the material on the website is kept up to date.
+            </p>
+
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Disclaimer</h2>
+            <p class="mb-8 font-light text-gray-900 sm:text-base dark:text-gray-400">To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:
+            </p>
+
+            <ul role="list" class="space-y-5 my-7">
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">limit or exclude our or your liability for death or personal injury.
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">limit or exclude our or your liability for fraud or fraudulent misrepresentation.
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">limit any of our or your liabilities in any way that is not permitted under applicable law.
+                    </span>
+                </li>
+                <li class="flex space-x-3">
+                    <!-- Icon -->
+                    <svg class="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span class="text-base font-light leading-tight text-gray-900 dark:text-white">exclude any of our or your liabilities that may not be excluded under applicable law.
+                    </span>
+                </li>
+            </ul>
+
+            <p class="font-light text-gray-900 sm:text-base dark:text-gray-400">The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.
+            </p>
+
+
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="bg-white dark:bg-gray-800">
+    <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
+       
+        <div class="text-center">
+            <a href="./index.html" class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white">
+                <img src="./images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Roomly Logo" />
+                Roomly    
+            </a>
+            <span class="block text-sm text-center text-gray-500 dark:text-gray-400">© 2024 Roomly™. All Rights Reserved.</span>
+
+            <div class="mt-2 flex items-center justify-center">
+
+            <a href="./terms.html" class="mx-5 text-2xl font-semibold text-gray-900 dark:text-white">
+            <span class="block text-sm text-center text-gray-500 dark:text-gray-400">Terms and Conditions</span> </a>
+
+            <p class="mx-2 text-2xl font-semibold text-gray-900 dark:text-white">
+                <span class="block text-sm text-center text-gray-500 dark:text-gray-400">-</span> </p>
+
+            <a href="./policy.html" class="mx-5 text-2xl font-semibold text-gray-900 dark:text-white">
+            <span class="block text-sm text-center text-gray-500 dark:text-gray-400">Privacy Notice</span></a>
+            
+            </div>
+
+        </div>
+    </div>
+</footer>                   
+               
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+
+
+</body>
+
+</html>
